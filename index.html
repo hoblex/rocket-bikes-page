@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Агенство Лунный Байк</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="page-body">
+<header class="page-header">
+  <h1 class="visually-hidden">Сайт магазина "Лунный Байк"</h1>
+  <nav class="header-nav header-nav--nojs">
+    <ul class="header-nav__list">
+      <li class="header-nav__item"><a class="header-nav__item-link" href="#about">О нас</a></li>
+      <li class="header-nav__item"><a class="header-nav__item-link" href="#types">Виды велосипедов</a></li>
+      <li class="header-nav__item"><a class="header-nav__item-link" href="#video">Видео про велосипеды</a></li>
+      <li class="header-nav__item"><a class="header-nav__item-link" href="#contacts">Контакты</a></li>
+    </ul>
+  </nav>
+  <a class="page-header__logo-link ">
+    <svg class="header-nav__logo-icon" width="67" height="20">
+      <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+    </svg>
+  </a>
+  <div class="page-header__description">
+    <p class="page-header__description-title">Мы продаем велосипеды</p>
+    <p class="page-header__decription-text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+  </div>
+  <form class="page-header__form  form" action="https://echo.htmlacademy.ru" method="get">
+    <h2 class="visually-hidden">Форма для подбора велосипеда</h2>
+    <p class="form__description">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+    <label class="form__label form__label--name">
+      <input class="form__control" type="text" placeholder="Введите Ваше Имя" pattern="^[а-яА-ЯёЁa-zA-Z]+$" required="">
+    </label>
+    <label class="form__label form__label--tel">
+      <input class="form__control" type="tel" placeholder="Введите Ваш номер телефона" pattern="^[0-9]+$" required="">
+    </label>
+    <button class="form__submit" type="submit">Подобрать велосипед мечты</button>
+  </form>
+</header>
+<main class="page-main">
+  <section class="description" id="about">
+    <h2 class="description__title">Несколько фактов о нас</h2>
+    <ol class="description__list">
+      <li class="description__item">Самый широкий выбор велосипедов!</li>
+      <li class="description__item">Доставка велосипедов по всей России!</li>
+      <li class="description__item">Большой выбор крутых аксессуаров!</li>
+      <li class="description__item">Профессиональные консультации!</li>
+    </ol>
+  </section>
+  <section class="bike-types">
+    <h2 class="bike-types__title">Виды велосипедов</h2>
+    <ul class="bike-types__list type-list">
+      <li class="type-list__item">
+        <picture class="type-list__item-image">
+          <source type="image/webp" srcset="img/road-bike@1x.webp 1x, img/road-bike@2x.webp 2x">
+
+          <img src="img/road-bike@1x.png" srcset="img/road-bike@2x.png 2x" alt="Дорожный велосипед">
+        </picture>
+        <span class="type-list__item-name">Дорожный велосипед</span>
+      </li>
+      <li class="type-list__item">
+        <picture class="type-list__item-image">
+          <source type="image/webp" srcset="img/mountain-bike@1x.webp 1x, img/mountain-bike@2x.webp 2x">
+
+          <img src="img/mountain-bike@1x.png" srcset="img/mountain-bike@2x.png 2x" alt="Горный велосипед">
+        </picture>
+        <span class="type-list__item-name">Горный велосипед</span>
+      </li>
+      <li class="type-list__item">
+        <picture class="type-list__item-image">
+          <source type="image/webp" srcset="img/children-bike@1x.webp 1x, img/children-bike@2x.webp 2x">
+
+          <img src="img/children-bike@1x.png" srcset="img/children-bike@2x.png 2x" alt="Детский велосипед">
+        </picture>
+        <span class="type-list__item-name">Детский велосипед</span>
+      </li>
+    </ul>
+  </section>
+  <article class="information-article">
+    <h2 class="information-article__title">Видео про велосипеды</h2>
+    <p class="information-article__description">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
+    <div class="information-article__video-content video-player">
+      <picture>
+        <source type="image/webp" srcset="img/dummy-bike@1x.webp 1x, img/dummy-bike@2x.webp 2x">
+
+        <img src="img/dummy-bike@1x.png" srcset="img/dummy-bike@2x.png 2x" alt="Заглушка дл я превью видео">
+      </picture>
+      <button class="video-player__control" type="button"><span class="visually-hidden">Запустить видео</span></button>
+    </div>
+  </article>
+  <section class="contacts">
+    <h2 class="visually-hidden">Контакты</h2>
+    <p class="contacts__title">Как нас найти</p>
+    <p class="contacts__description">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+    <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="957" height="530" allowfullscreen="" aria-label="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+    <div class="contacts__data">
+      <a class="contacts__email" href="mailto:puteshestviemechta@gmail.ru">
+        <svg class="contacts__email__email-icon" width="26" height="20">
+          <use xlink:href="img/sprite_auto.svg#icon-email"></use>
+        </svg>
+        <span class="contacts__email-text">puteshestviemechta@gmail.ru</span>
+      </a>
+      <a class="contacts__phone" href="tel:+749978468446">
+        <svg class="contacts__email__phone-icon" width="26" height="20">
+          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+        </svg>
+        <span class="contacts__phone-text">+7 (499) -784-684-46</span>
+      </a>
+    </div>
+  </section>
+</main>
+</body>
+</html>
