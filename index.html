@@ -8,16 +8,18 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
-<header class="page-header">
+<header class="page-header page-header--nojs">
   <h1 class="visually-hidden">Сайт магазина "Лунный Байк"</h1>
-  <nav class="header-nav header-nav--nojs">
+  <nav class="page-header__nav  header-nav">
     <ul class="header-nav__list">
       <li class="header-nav__item"><a class="header-nav__item-link" href="#about">О нас</a></li>
       <li class="header-nav__item"><a class="header-nav__item-link" href="#types">Виды велосипедов</a></li>
       <li class="header-nav__item"><a class="header-nav__item-link" href="#video">Видео про велосипеды</a></li>
       <li class="header-nav__item"><a class="header-nav__item-link" href="#contacts">Контакты</a></li>
     </ul>
+    <div class="overlay"></div>
   </nav>
+  <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
   <div class="page-header__wrap">
     <div class="page-header__description-wrap">
       <a class="page-header__logo-link">
@@ -54,33 +56,35 @@
     </ol>
   </section>
   <section class="bike-types" id="types">
-    <h2 class="bike-types__title">Виды велосипедов</h2>
-    <ul class="bike-types__list type-list">
-      <li class="type-list__item  type-list__item--road">
-        <picture class="type-list__item-image">
-          <source type="image/webp" srcset="img/road-bike@1x.webp 1x, img/road-bike@2x.webp 2x">
+    <div class="bike-types__wrap">
+      <h2 class="bike-types__title">Виды велосипедов</h2>
+      <ul class="bike-types__list type-list">
+        <li class="type-list__item  type-list__item--road">
+          <picture class="type-list__item-image">
+            <source type="image/webp" srcset="img/road-bike@1x.webp 1x, img/road-bike@2x.webp 2x">
 
-          <img src="img/road-bike@1x.png" srcset="img/road-bike@2x.png 2x" alt="Дорожный велосипед" width="342" height="503">
-        </picture>
-        <span class="type-list__item-name">Дорожный велосипед</span>
-      </li>
-      <li class="type-list__item  type-list__item--mountain">
-        <picture class="type-list__item-image">
-          <source type="image/webp" srcset="img/mountain-bike@1x.webp 1x, img/mountain-bike@2x.webp 2x">
+            <img src="img/road-bike@1x.png" srcset="img/road-bike@2x.png 2x" alt="Дорожный велосипед" width="342" height="503">
+          </picture>
+          <span class="type-list__item-name">Дорожный велосипед</span>
+        </li>
+        <li class="type-list__item  type-list__item--mountain">
+          <picture class="type-list__item-image">
+            <source type="image/webp" srcset="img/mountain-bike@1x.webp 1x, img/mountain-bike@2x.webp 2x">
 
-          <img src="img/mountain-bike@1x.png" srcset="img/mountain-bike@2x.png 2x" alt="Горный велосипед" width="342" height="566">
-        </picture>
-        <span class="type-list__item-name">Горный велосипед</span>
-      </li>
-      <li class="type-list__item  type-list__item--children">
-        <picture class="type-list__item-image">
-          <source type="image/webp" srcset="img/children-bike@1x.webp 1x, img/children-bike@2x.webp 2x">
+            <img src="img/mountain-bike@1x.png" srcset="img/mountain-bike@2x.png 2x" alt="Горный велосипед" width="342" height="566">
+          </picture>
+          <span class="type-list__item-name">Горный велосипед</span>
+        </li>
+        <li class="type-list__item  type-list__item--children">
+          <picture class="type-list__item-image">
+            <source type="image/webp" srcset="img/children-bike@1x.webp 1x, img/children-bike@2x.webp 2x">
 
-          <img src="img/children-bike@1x.png" srcset="img/children-bike@2x.png 2x" alt="Детский велосипед" width="342" height="513">
-        </picture>
-        <span class="type-list__item-name">Детский велосипед</span>
-      </li>
-    </ul>
+            <img src="img/children-bike@1x.png" srcset="img/children-bike@2x.png 2x" alt="Детский велосипед" width="342" height="513">
+          </picture>
+          <span class="type-list__item-name">Детский велосипед</span>
+        </li>
+      </ul>
+    </div>
   </section>
   <article class="information-article" id="video">
     <div class="information-article__wrap">
@@ -90,9 +94,14 @@
         <picture>
           <source type="image/webp" srcset="img/dummy-bike@1x.webp 1x, img/dummy-bike@2x.webp 2x">
 
-          <img src="img/dummy-bike@1x.png" srcset="img/dummy-bike@2x.png 2x" alt="Заглушка дл я превью видео">
+          <img src="img/dummy-bike@1x.png" srcset="img/dummy-bike@2x.png 2x" alt="Заглушка для превью видео" width="929" height="522">
         </picture>
-        <button class="video-player__control" type="button"><span class="visually-hidden">Запустить видео</span></button>
+        <button class="video-player__control" type="button">
+          <svg class="video-player__control-icon" width="65" height="65">
+            <use xlink:href="img/sprite_auto.svg#icon-play"></use>
+          </svg>
+          <span class="visually-hidden">Запустить видео</span>
+        </button>
       </div>
     </div>
   </article>
@@ -117,5 +126,6 @@
     </div>
   </section>
 </main>
+<script src="js/script.js"></script>
 </body>
 </html>
