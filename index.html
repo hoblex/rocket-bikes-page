@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Агенство подбора велосипедов">
   <title>Агенство Лунный Байк</title>
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/opensans-light.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="js/script.min.js" as="script">
   <link rel="preload" href="css/style.min.css" as="style">
   <link rel="stylesheet" href="css/style.min.css">
@@ -13,7 +17,7 @@
 <body class="page-body">
 <header class="page-header page-header--nojs">
   <h1 class="visually-hidden">Сайт магазина "Лунный Байк"</h1>
-  <nav class="page-header__nav  header-nav">
+  <nav class="page-header__nav header-nav">
     <ul class="header-nav__list">
       <li class="header-nav__item"><a class="header-nav__item-link" href="#about">О нас</a></li>
       <li class="header-nav__item"><a class="header-nav__item-link" href="#types">Виды велосипедов</a></li>
@@ -35,13 +39,15 @@
         <p class="page-header__description-text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
       </div>
     </div>
-    <form class="page-header__form  form" action="https://echo.htmlacademy.ru" method="get">
+    <form class="page-header__form form" action="https://echo.htmlacademy.ru" method="get">
       <h2 class="visually-hidden">Форма для подбора велосипеда</h2>
       <p class="form__description">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
       <label class="form__label form__label--name">
+        <span class="visually-hidden">Имя пользователя</span>
         <input class="form__control" type="text" placeholder="Введите Ваше Имя" pattern="^[а-яА-ЯёЁa-zA-Z]+$" required="">
       </label>
       <label class="form__label form__label--tel">
+        <span class="visually-hidden">Номер телефона</span>
         <input class="form__control" type="tel" placeholder="Введите Ваш номер телефона" pattern="^[0-9]+$" required="">
       </label>
       <button class="form__submit" type="submit">Подобрать велосипед мечты</button>
@@ -62,26 +68,26 @@
     <div class="bike-types__wrap">
       <h2 class="bike-types__title">Виды велосипедов</h2>
       <ul class="bike-types__list type-list">
-        <li class="type-list__item  type-list__item--road">
+        <li class="type-list__item type-list__item--road">
           <picture class="type-list__item-picture">
             <source type="image/webp" srcset="img/road-bike@1x.webp 1x, img/road-bike@2x.webp 2x">
-
+            <!-- 1х: 342px; 2x: 684px -->
             <img src="img/road-bike@1x.png" srcset="img/road-bike@2x.png 2x" alt="Дорожный велосипед" width="342" height="503">
           </picture>
           <span class="type-list__item-name">Дорожный велосипед</span>
         </li>
-        <li class="type-list__item  type-list__item--mountain">
+        <li class="type-list__item type-list__item--mountain">
           <picture class="type-list__item-picture">
             <source type="image/webp" srcset="img/mountain-bike@1x.webp 1x, img/mountain-bike@2x.webp 2x">
-
+            <!-- 1х: 342px; 2x: 684px -->
             <img src="img/mountain-bike@1x.png" srcset="img/mountain-bike@2x.png 2x" alt="Горный велосипед" width="342" height="566">
           </picture>
           <span class="type-list__item-name">Горный велосипед</span>
         </li>
-        <li class="type-list__item  type-list__item--children">
+        <li class="type-list__item type-list__item--children">
           <picture class="type-list__item-picture">
             <source type="image/webp" srcset="img/children-bike@1x.webp 1x, img/children-bike@2x.webp 2x">
-
+            <!-- 1х: 342px; 2x: 684px -->
             <img src="img/children-bike@1x.png" srcset="img/children-bike@2x.png 2x" alt="Детский велосипед" width="342" height="513">
           </picture>
           <span class="type-list__item-name">Детский велосипед</span>
@@ -96,7 +102,7 @@
       <div class="information-article__video-content video-player">
         <picture>
           <source type="image/webp" srcset="img/dummy-bike@1x.webp 1x, img/dummy-bike@2x.webp 2x">
-
+          <!-- 1х: 929px; 2x: 1858px -->
           <img src="img/dummy-bike@1x.png" srcset="img/dummy-bike@2x.png 2x" alt="Заглушка для превью видео" width="929" height="522">
         </picture>
         <button class="video-player__control" type="button">
@@ -129,6 +135,6 @@
     </div>
   </section>
 </main>
-<script src="js/script.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
