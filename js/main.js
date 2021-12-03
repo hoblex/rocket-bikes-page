@@ -45,7 +45,7 @@
     item.addEventListener('click', menuClose);
   });
 
-  function submitHandler(evt) {
+  function submitHandler() {
     myStorage.setItem('name', headerFormNameInput.value);
     myStorage.setItem('phone', headerFormPhoneInput.value);
   }
